@@ -6,6 +6,9 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
+/**
+ * Created by jt on 5/24/17.
+ */
 public class PropertyInjectedControllerTest {
 
     private PropertyInjectedController propertyInjectedController;
@@ -17,8 +20,7 @@ public class PropertyInjectedControllerTest {
     }
 
     @Test
-    public void testGreetino() throws Exception {
+    public void testGreeting() throws Exception {
         assertEquals(GreetingServiceImpl.HELLO_GURUS, propertyInjectedController.sayHello());
     }
-
 }
