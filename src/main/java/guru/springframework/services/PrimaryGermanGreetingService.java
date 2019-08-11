@@ -12,7 +12,13 @@ import org.springframework.stereotype.Service;
 @Profile("de")
 public class PrimaryGermanGreetingService implements GreetingService {
 
+    //For this member we need to create a constructor to dependency injector.
     private GreetingRepository greetingRepository;
+
+    //Here have to create this Constructor and Spring will autowire this
+    public PrimaryGermanGreetingService(GreetingRepository greetingRepository) {
+        this.greetingRepository = greetingRepository;
+    }
 
     @Override
     public String sayGreeting() {

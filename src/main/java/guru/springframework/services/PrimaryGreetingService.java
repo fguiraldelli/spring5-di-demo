@@ -14,6 +14,11 @@ public class PrimaryGreetingService implements GreetingService {
 
     private GreetingRepository greetingRepository;
 
+    //insert constructor here for DI
+    public PrimaryGreetingService(GreetingRepository greetingRepository) {
+        this.greetingRepository = greetingRepository;
+    }
+
     @Override
     public String sayGreeting() {
         return greetingRepository.getEnglishGreeting();
